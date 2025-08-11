@@ -195,10 +195,6 @@ export default function Home() {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Voltage Elektroinštalacije s.p. - Profesionalne elektroinštalacije</title>
-        <meta name="description" content="Voltage Elektroinštalacije s.p. zagotavlja kakovostne elektro storitve v Sloveniji. Z več kot 10-letnimi izkušnjami smo vaš zanesljiv partner za vse električne potrebe." />
-        <meta name="keywords" content="elektroinštalacije, elektrikar, električne napake, pametni dom, LED razsvetljava, Ljubljana" />
-        <meta name="author" content="Voltage Elektroinštalacije s.p." />
-        
       </Head>
 
       <div className="min-h-screen bg-background">
