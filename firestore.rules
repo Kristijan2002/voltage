@@ -1,0 +1,27 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Allow public read access to services, projects, and FAQs
+    // This enables client-side data fetching without authentication
+    
+    match /services/{document} {
+      allow read: if true;  // Public read access
+      allow write: if request.auth != null;  // Only authenticated users can write
+    }
+    
+    match /projects/{document} {
+      allow read: if true;  // Public read access
+      allow write: if request.auth != null;  // Only authenticated users can write
+    }
+    
+    match /faqs/{document} {
+      allow read: if true;  // Public read access
+      allow write: if request.auth != null;  // Only authenticated users can write
+    }
+    
+    // Default rule - deny all other access
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

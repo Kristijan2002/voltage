@@ -1,0 +1,334 @@
+{
+  "navigation": {
+    "home": "Home",
+    "services": "Services",
+    "portfolio": "Our Work",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "admin": "Admin",
+    "back": "Back to Home"
+  },
+  "login": {
+    "title": "Admin Panel",
+    "subtitle": "Voltage Elektroinštalacije s.p.",
+    "email": "Email",
+    "password": "Password",
+    "emailPlaceholder": "Enter your email",
+    "passwordPlaceholder": "Enter password",
+    "loginButton": "Login",
+    "loggingIn": "Logging in...",
+    "backToSite": "← Back to site",
+    "firebaseNote": "Log in with your Firebase account",
+    "firebaseDetails": "Use the email and password you set up in Firebase",
+    "errors": {
+      "invalidCredentials": "Incorrect username or password",
+      "tooManyRequests": "Too many failed attempts. Try again later.",
+      "general": "An error occurred during login. Please try again."
+    }
+  },
+  "admin": {
+    "title": "⚡ Voltage Admin",
+    "backToSite": "Back to site",
+    "resetData": "Reset data",
+    "administration": "Administration",
+    "logout": "Logout",
+    "tabs": {
+      "services": "Services",
+      "projects": "Projects",
+      "faqs": "FAQ"
+    },
+    "services": {
+      "title": "Service Management",
+      "addService": "Add service",
+      "newService": "New service",
+      "serviceTitle": "Title",
+      "serviceIcon": "Icon",
+      "serviceDescription": "Description",
+      "serviceShortDescription": "Short description",
+      "serviceDetails": "Details",
+      "servicePrice": "Price",
+      "serviceWarranty": "Warranty",
+      "serviceDuration": "Duration",
+      "serviceMaterials": "Materials (comma separated)",
+      "serviceBrands": "Brands (comma separated)",
+      "serviceProcess": "Process (comma separated)",
+      "serviceIncluded": "Included (comma separated)",
+      "addServiceButton": "Add service",
+      "cancel": "Cancel",
+      "save": "Save",
+      "edit": "Edit",
+      "delete": "Delete",
+      "deleteConfirm": "Are you sure you want to delete this service?",
+      "errorAdding": "Error adding service",
+      "errorUpdating": "Error updating service",
+      "errorDeleting": "Error deleting service"
+    },
+    "projects": {
+      "title": "Project Management",
+      "addProject": "Add project",
+      "newProject": "New project",
+      "projectTitle": "Title",
+      "projectCategory": "Category",
+      "projectDescription": "Description",
+      "projectShortDescription": "Short description",
+      "projectFullDescription": "Full description",
+      "projectImage": "Main image URL",
+      "projectClient": "Client",
+      "projectLocation": "Location",
+      "projectYear": "Year",
+      "projectDuration": "Duration",
+      "projectBudget": "Budget",
+      "projectTechnologies": "Technologies (comma separated)",
+      "projectChallenges": "Challenges (comma separated)",
+      "projectSolutions": "Solutions (comma separated)",
+      "projectResults": "Results (comma separated)",
+      "projectImages": "Image URLs (comma separated)",
+      "projectTestimonial": "Client testimonial",
+      "testimonialText": "Testimonial text",
+      "testimonialAuthor": "Author name",
+      "testimonialPosition": "Position",
+      "addProjectButton": "Add project",
+      "cancel": "Cancel",
+      "save": "Save",
+      "edit": "Edit",
+      "delete": "Delete",
+      "deleteConfirm": "Are you sure you want to delete this project?",
+      "errorAdding": "Error adding project",
+      "errorUpdating": "Error updating project",
+      "errorDeleting": "Error deleting project"
+    },
+    "faqs": {
+      "title": "FAQ Management",
+      "addFaq": "Add question",
+      "newFaq": "New question",
+      "faqQuestion": "Question",
+      "faqAnswer": "Answer",
+      "addFaqButton": "Add question",
+      "cancel": "Cancel",
+      "save": "Save",
+      "edit": "Edit",
+      "delete": "Delete",
+      "deleteConfirm": "Are you sure you want to delete this question?",
+      "errorAdding": "Error adding question",
+      "errorUpdating": "Error updating question",
+      "errorDeleting": "Error deleting question"
+    },
+    "common": {
+      "loading": "Loading...",
+      "checkingAccess": "Checking access...",
+      "redirectingToLogin": "Redirecting to login...",
+      "resetConfirm": "Are you sure you want to reset all data to initial values? This will delete all changes.",
+      "usingInitialData": "Using initial data as fallback.",
+      "firebasePermissionError": "Firebase Permission Error: {message}\n\nPlease check:\n1. You are logged in\n2. Firebase security rules allow access\n3. Your Firebase project is properly configured"
+    }
+  },
+  "hero": {
+    "title": "Professional Electrical Installations for Your Home and Business",
+    "subtitle": "Voltage Elektroinštalacije s.p. provides quality electrical services in Slovenia. With over 10 years of experience, we are your reliable partner for all electrical needs.",
+    "callToAction": "Call Us",
+    "servicesButton": "Our Services",
+    "cta": {
+      "call": "Call Us",
+      "services": "Our Services"
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "We offer comprehensive electrical services for all your needs",
+    "details": "Service Details",
+    "order": "Order Service",
+    "quote": "Get Quote",
+    "items": {
+      "servis": {
+        "title": "Service & Maintenance",
+        "description": "Regular inspections and electrical installation service"
+      },
+      "odpravljanje-napak": {
+        "title": "Fault Repair",
+        "description": "24/7 response for critical situations",
+        "details": "Fast and reliable repair of electrical faults. We are available 24 hours a day, 7 days a week for emergency cases. We use the most modern equipment for diagnosing and solving problems.",
+        "icon": "⚡",
+        "price": "€45/hour (emergency cases)",
+        "warranty": "2 years warranty",
+        "duration": "30 min - 4 hours",
+        "materials": [
+          "Spare parts for immediate replacement",
+          "Universal cables and connectors",
+          "Safety equipment (ABB, Hager)",
+          "Diagnostic instruments (Fluke, Testo)"
+        ],
+        "brands": ["ABB", "Hager", "Schneider Electric", "Siemens", "Fluke", "Testo"],
+        "process": [
+          "Quick response to calls (2-4 hours)",
+          "Safety assessment of the situation",
+          "Fault localization with diagnostic equipment",
+          "Immediate temporary solution for safety",
+          "Permanent fault repair",
+          "Preventive measures to prevent recurrence"
+        ],
+        "included": [
+          "Free service call in Ljubljana",
+          "24/7 availability",
+          "Temporary solution within 30 minutes",
+          "Warranty on completed work",
+          "Consultation to prevent faults"
+        ]
+      },
+      "nove-instalacije": {
+        "title": "New Electrical Installations",
+        "description": "Complete electrical installations for new apartments and houses",
+        "details": "Design and implementation of new electrical installations for residential and commercial buildings. We ensure quality execution in accordance with current standards and regulations.",
+        "icon": "🏠",
+        "price": "From €25/m²",
+        "warranty": "5 years warranty",
+        "duration": "3-14 days",
+        "materials": [
+          "Copper cables NYM-J (Nexans, Prysmian)",
+          "Distribution cabinets (ABB, Schneider)",
+          "Safety elements (ABB, Hager)",
+          "Installation pipes and channels (Pipelife)"
+        ],
+        "brands": ["ABB", "Hager", "Schneider Electric", "Siemens", "Nexans", "Prysmian"],
+        "process": [
+          "Consultation and planning",
+          "Design and permits",
+          "Installation execution",
+          "Testing and verification",
+          "As-built documentation",
+          "Usage consultation"
+        ],
+        "included": [
+          "Free consultation",
+          "Design and permits",
+          "All necessary equipment",
+          "Testing and verification",
+          "Warranty on completed work"
+        ]
+      },
+      "svetila": {
+        "title": "Light Installation",
+        "description": "Professional installation of all types of lighting"
+      },
+      "vtičnice": {
+        "title": "Outlet Installation",
+        "description": "Adding new outlets and switches"
+      },
+      "pametni-dom": {
+        "title": "Smart Home",
+        "description": "Automation and smart systems"
+      }
+    }
+  },
+  "portfolio": {
+    "title": "Our Work",
+    "subtitle": "Take a look at some of our latest projects",
+    "all": "All Work",
+    "allProjects": "All Projects",
+    "empty": "No projects in this category."
+  },
+  "whyChooseUs": {
+    "title": "Why Choose Us?",
+    "certificates": {
+      "title": "Certificates",
+      "description": "Licensed electrician with all necessary certificates"
+    },
+    "speed": {
+      "title": "Speed",
+      "description": "Response within 24 hours, 24/7 for emergency cases"
+    },
+    "warranty": {
+      "title": "Warranty",
+      "description": "2-year warranty on all completed work"
+    },
+    "support": {
+      "title": "Support",
+      "description": "Ongoing support even after work is completed"
+    }
+  },
+  "whyus": {
+    "title": "Why Choose Us?",
+    "certified": "Certified",
+    "certified_desc": "Licensed electrician with all necessary certificates",
+    "speed": "Speed",
+    "speed_desc": "Response within 24 hours, 24/7 for emergency cases",
+    "warranty": "Warranty",
+    "warranty_desc": "2-year warranty on all completed work",
+    "support": "Support",
+    "support_desc": "Ongoing support even after work is completed"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Answers to the most common questions from our clients"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Call us or send a message for a free quote",
+    "info": "Contact Information",
+    "phone": "Phone",
+    "email": "Email",
+    "area": "Service Area",
+    "area_value": "Ljubljana and surroundings",
+    "area_note": "By arrangement also throughout Slovenia",
+    "emergency": "Emergencies",
+    "emergency_desc": "For urgent electrical failures, we are available 24/7. Call us immediately!",
+    "contactInfo": {
+      "title": "Contact Information",
+      "phone": {
+        "label": "Phone",
+        "number": "+38640 123 456",
+        "note": "24/7 for emergency cases"
+      },
+      "email": {
+        "label": "Email",
+        "address": "info@voltage-elektro.si",
+        "note": "We respond within 24 hours"
+      },
+      "area": {
+        "label": "Service Area",
+        "location": "Ljubljana and surrounding area",
+        "note": "By arrangement also wider across Slovenia"
+      }
+    },
+    "form": {
+      "title": "Send Message",
+      "name": "Name and Surname",
+      "phone": "Phone",
+      "message": "Message",
+      "placeholder": "Describe your need or problem...",
+      "submit": "Send Message",
+      "success": "Message has been sent! We will contact you as soon as possible."
+    }
+  },
+  "footer": {
+    "description": "Professional electrical installations for your home and business. Reliable partner with over 10 years of experience.",
+    "certified": "Licensed Electrician",
+    "licensedElectrician": "Licensed Electrician",
+    "services": "Services",
+    "contact": "Contact",
+    "copyright": "© 2024 Voltage Elektroinštalacije s.p. All rights reserved."
+  },
+  "details": {
+    "price": "Price",
+    "duration": "Duration",
+    "warranty": "Warranty",
+    "service": "Service",
+    "professional": "Professional",
+    "process": "Service Process",
+    "included": "What's Included",
+    "materials": "Materials and Components",
+    "materials_desc": "We use only quality materials from leading manufacturers",
+    "brands": "Partner Brands",
+    "brands_desc": "We collaborate with the most respected electrical equipment manufacturers",
+    "need": {
+      "title": "Need This Service?",
+      "desc": "Call us for free consultation and estimate. We will prepare an individual offer tailored to your needs."
+    },
+    "inquiry": "Send Inquiry"
+  },
+  "common": {
+    "from": "From",
+    "24h": "24/7 for emergencies",
+    "24h_available": "24/7 AVAILABILITY",
+    "response": "We respond within 24 hours"
+  }
+}

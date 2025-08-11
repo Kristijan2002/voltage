@@ -1,0 +1,334 @@
+{
+  "navigation": {
+    "home": "Domov",
+    "services": "Storitve",
+    "portfolio": "Naša dela",
+    "faq": "Pogosta vprašanja",
+    "contact": "Kontakt",
+    "admin": "Admin",
+    "back": "Nazaj na domov"
+  },
+  "login": {
+    "title": "Admin Panel",
+    "subtitle": "Voltage Elektroinštalacije s.p.",
+    "email": "E-pošta",
+    "password": "Geslo",
+    "emailPlaceholder": "Vnesite svoj email",
+    "passwordPlaceholder": "Vnesite geslo",
+    "loginButton": "Prijava",
+    "loggingIn": "Prijava...",
+    "backToSite": "← Nazaj na stran",
+    "firebaseNote": "Prijavite se z vašim Firebase računom",
+    "firebaseDetails": "Uporabite email in geslo, ki ste jih nastavili v Firebase",
+    "errors": {
+      "invalidCredentials": "Napačno uporabniško ime ali geslo",
+      "tooManyRequests": "Preveč neuspešnih poskusov. Poskusite znova kasneje.",
+      "general": "Prišlo je do napake med prijavo. Poskusite znova."
+    }
+  },
+  "admin": {
+    "title": "⚡ Voltage Admin",
+    "backToSite": "Nazaj na stran",
+    "resetData": "Ponastavi podatke",
+    "administration": "Administracija",
+    "logout": "Odjava",
+    "tabs": {
+      "services": "Storitve",
+      "projects": "Projekti",
+      "faqs": "FAQ"
+    },
+    "services": {
+      "title": "Upravljanje storitev",
+      "addService": "Dodaj storitev",
+      "newService": "Nova storitev",
+      "serviceTitle": "Naslov",
+      "serviceIcon": "Ikona",
+      "serviceDescription": "Opis",
+      "serviceShortDescription": "Kratek opis",
+      "serviceDetails": "Podrobnosti",
+      "servicePrice": "Cena",
+      "serviceWarranty": "Garancija",
+      "serviceDuration": "Trajanje",
+      "serviceMaterials": "Materiali (ločeni z vejico)",
+      "serviceBrands": "Blagovne znamke (ločene z vejico)",
+      "serviceProcess": "Postopek (ločen z vejico)",
+      "serviceIncluded": "Vključeno (ločeno z vejico)",
+      "addServiceButton": "Dodaj storitev",
+      "cancel": "Prekliči",
+      "save": "Shrani",
+      "edit": "Uredi",
+      "delete": "Izbriši",
+      "deleteConfirm": "Ali ste prepričani, da želite izbrisati to storitev?",
+      "errorAdding": "Napaka pri dodajanju storitve",
+      "errorUpdating": "Napaka pri posodabljanju storitve",
+      "errorDeleting": "Napaka pri brisanju storitve"
+    },
+    "projects": {
+      "title": "Upravljanje projektov",
+      "addProject": "Dodaj projekt",
+      "newProject": "Nov projekt",
+      "projectTitle": "Naslov",
+      "projectCategory": "Kategorija",
+      "projectDescription": "Opis",
+      "projectShortDescription": "Kratek opis",
+      "projectFullDescription": "Podrobni opis",
+      "projectImage": "URL glavne slike",
+      "projectClient": "Stranka",
+      "projectLocation": "Lokacija",
+      "projectYear": "Leto",
+      "projectDuration": "Trajanje",
+      "projectBudget": "Proračun",
+      "projectTechnologies": "Tehnologije (ločene z vejico)",
+      "projectChallenges": "Izzivi (ločeni z vejico)",
+      "projectSolutions": "Rešitve (ločene z vejico)",
+      "projectResults": "Rezultati (ločeni z vejico)",
+      "projectImages": "URL slik (ločeni z vejico)",
+      "projectTestimonial": "Mnenje stranke",
+      "testimonialText": "Besedilo mnenja",
+      "testimonialAuthor": "Avtor mnenja",
+      "testimonialPosition": "Pozicija",
+      "addProjectButton": "Dodaj projekt",
+      "cancel": "Prekliči",
+      "save": "Shrani",
+      "edit": "Uredi",
+      "delete": "Izbriši",
+      "deleteConfirm": "Ali ste prepričani, da želite izbrisati ta projekt?",
+      "errorAdding": "Napaka pri dodajanju projekta",
+      "errorUpdating": "Napaka pri posodabljanju projekta",
+      "errorDeleting": "Napaka pri brisanju projekta"
+    },
+    "faqs": {
+      "title": "Upravljanje FAQ",
+      "addFaq": "Dodaj vprašanje",
+      "newFaq": "Novo vprašanje",
+      "faqQuestion": "Vprašanje",
+      "faqAnswer": "Odgovor",
+      "addFaqButton": "Dodaj vprašanje",
+      "cancel": "Prekliči",
+      "save": "Shrani",
+      "edit": "Uredi",
+      "delete": "Izbriši",
+      "deleteConfirm": "Ali ste prepričani, da želite izbrisati to vprašanje?",
+      "errorAdding": "Napaka pri dodajanju vprašanja",
+      "errorUpdating": "Napaka pri posodabljanju vprašanja",
+      "errorDeleting": "Napaka pri brisanju vprašanja"
+    },
+    "common": {
+      "loading": "Nalaganje...",
+      "checkingAccess": "Preverjanje dostopa...",
+      "redirectingToLogin": "Preusmerjanje na prijavo...",
+      "resetConfirm": "Ali ste prepričani, da želite ponastaviti vse podatke na začetne vrednosti? To bo izbrisalo vse spremembe.",
+      "usingInitialData": "Uporabljam začetne podatke kot nadomestilo.",
+      "firebasePermissionError": "Firebase napaka dovoljenj: {message}\n\nProsimo preverite:\n1. Prijavljeni ste\n2. Firebase varnostna pravila dovolijo dostop\n3. Vaš Firebase projekt je pravilno nastavljen"
+    }
+  },
+  "hero": {
+    "title": "Profesionalne elektroinštalacije za vaš dom in podjetje",
+    "subtitle": "Voltage Elektroinštalacije s.p. zagotavlja kakovostne elektro storitve v Sloveniji. Z več kot 10-letnimi izkušnjami smo vaš zanesljiv partner za vse električne potrebe.",
+    "callToAction": "Pokličite nas",
+    "servicesButton": "Naše storitve",
+    "cta": {
+      "call": "Pokličite nas",
+      "services": "Naše storitve"
+    }
+  },
+  "services": {
+    "title": "Naše storitve",
+    "subtitle": "Nudimo celovite elektro storitve za vse vaše potrebe",
+    "details": "Podrobnosti storitve",
+    "order": "Naročite storitev",
+    "quote": "Pridobite ponudbo",
+    "items": {
+      "servis": {
+        "title": "Servis in vzdrževanje",
+        "description": "Redni pregledi in servis elektroinštalacij"
+      },
+      "odpravljanje-napak": {
+        "title": "Odpravljanje napak",
+        "description": "24/7 odziv za kritične situacije",
+        "details": "Hitro in zanesljivo odpravljanje električnih napak. Na razpolago smo 24 ur na dan, 7 dni v tednu za nujne primere. Uporabljamo najsodobnejšo opremo za diagnosticiranje in reševanje problemov.",
+        "icon": "⚡",
+        "price": "45€/ura (nujni primeri)",
+        "warranty": "2 leti garancije",
+        "duration": "30 min - 4 ure",
+        "materials": [
+          "Rezervni deli za takojšnjo zamenjavo",
+          "Univerzalni kabli in priključki",
+          "Varnostna oprema (ABB, Hager)",
+          "Diagnostični instrumenti (Fluke, Testo)"
+        ],
+        "brands": ["ABB", "Hager", "Schneider Electric", "Siemens", "Fluke", "Testo"],
+        "process": [
+          "Hiter odziv na klic (2-4 ure)",
+          "Varnostna ocena situacije",
+          "Lokalizacija napake z diagnostično opremo",
+          "Takojšnja začasna rešitev za varnost",
+          "Trajna odprava napake",
+          "Preventivni ukrepi za preprečitev ponovitve"
+        ],
+        "included": [
+          "Brezplačen dohod v Ljubljani",
+          "24/7 razpoložljivost",
+          "Začasna rešitev v 30 minutah",
+          "Garancija na opravljeno delo",
+          "Svetovanje za preprečitev napak"
+        ]
+      },
+      "nove-instalacije": {
+        "title": "Nove elektroinštalacije",
+        "description": "Popolne elektroinštalacije za nova stanovanja in hiše",
+        "details": "Projektiranje in izvedba novih elektroinštalacij za stanovanjske in poslovne objekte. Zagotavljamo kakovostno izvedbo v skladu z veljavnimi standardi in predpisi.",
+        "icon": "🏠",
+        "price": "Od 25€/m²",
+        "warranty": "5 let garancije",
+        "duration": "3-14 dni",
+        "materials": [
+          "Bakreni kabli NYM-J (Nexans, Prysmian)",
+          "Razdelilne omarice (ABB, Schneider)",
+          "Varnostni elementi (ABB, Hager)",
+          "Inštalacijske cevi in kanali (Pipelife)"
+        ],
+        "brands": ["ABB", "Hager", "Schneider Electric", "Siemens", "Nexans", "Prysmian"],
+        "process": [
+          "Konsultacija in načrtovanje",
+          "Projektiranje in dovoljenja",
+          "Izvedba inštalacije",
+          "Testiranje in preverjanje",
+          "Prenačrt in dokumentacija",
+          "Svetovanje za uporabo"
+        ],
+        "included": [
+          "Brezplačna konsultacija",
+          "Projektiranje in dovoljenja",
+          "Vsa potrebna oprema",
+          "Testiranje in preverjanje",
+          "Garancija na opravljeno delo"
+        ]
+      },
+      "svetila": {
+        "title": "Montaža svetil",
+        "description": "Profesionalna montaža vseh vrst svetil"
+      },
+      "vtičnice": {
+        "title": "Montaža vtičnic",
+        "description": "Dodajanje novih vtičnic in preklopnikov"
+      },
+      "pametni-dom": {
+        "title": "Pametni dom",
+        "description": "Avtomatizacija in pametni sistemi"
+      }
+    }
+  },
+  "portfolio": {
+    "title": "Naša dela",
+    "subtitle": "Oglejte si nekaj naših najnovejših projektov",
+    "all": "Vsa dela",
+    "allProjects": "Vsi projekti",
+    "empty": "Ni projektov v tej kategoriji."
+  },
+  "whyChooseUs": {
+    "title": "Zakaj izbrati nas?",
+    "certificates": {
+      "title": "Certifikati",
+      "description": "Licenciran elektrikar z vsemi potrebnimi certifikati"
+    },
+    "speed": {
+      "title": "Hitrost",
+      "description": "Odziv v 24 urah, za nujne primere 24/7"
+    },
+    "warranty": {
+      "title": "Garancija",
+      "description": "2-letna garancija na vse opravljeno delo"
+    },
+    "support": {
+      "title": "Podpora",
+      "description": "Stalna podpora tudi po opravljenem delu"
+    }
+  },
+  "whyus": {
+    "title": "Zakaj izbrati nas?",
+    "certified": "Certifikati",
+    "certified_desc": "Licenciran elektrikar z vsemi potrebnimi certifikati",
+    "speed": "Hitrost",
+    "speed_desc": "Odziv v 24 urah, za nujne primere 24/7",
+    "warranty": "Garancija",
+    "warranty_desc": "2-letna garancija na vse opravljeno delo",
+    "support": "Podpora",
+    "support_desc": "Stalna podpora tudi po opravljenem delu"
+  },
+  "faq": {
+    "title": "Pogosto zastavljena vprašanja",
+    "subtitle": "Odgovori na najpogostejša vprašanja naših strank"
+  },
+  "contact": {
+    "title": "Kontaktirajte nas",
+    "subtitle": "Pokličite nas ali pošljite sporočilo za brezplačno oceno",
+    "info": "Kontaktni podatki",
+    "phone": "Telefon",
+    "email": "E-pošta",
+    "area": "Območje delovanja",
+    "area_value": "Ljubljana in okolica",
+    "area_note": "V dogovoru tudi širše po Sloveniji",
+    "emergency": "Nujni primeri",
+    "emergency_desc": "Za nujne električne okvare smo na voljo 24/7. Pokličite nas takoj!",
+    "contactInfo": {
+      "title": "Kontaktni podatki",
+      "phone": {
+        "label": "Telefon",
+        "number": "+38640 123 456",
+        "note": "24/7 za nujne primere"
+      },
+      "email": {
+        "label": "E-pošta",
+        "address": "info@voltage-elektro.si",
+        "note": "Odgovorimo v 24 urah"
+      },
+      "area": {
+        "label": "Območje delovanja",
+        "location": "Ljubljana in okolica",
+        "note": "V dogovoru tudi širše po Sloveniji"
+      }
+    },
+    "form": {
+      "title": "Pošljite sporočilo",
+      "name": "Ime in priimek",
+      "phone": "Telefon",
+      "message": "Sporočilo",
+      "placeholder": "Opišite vašo potrebo ali problem...",
+      "submit": "Pošlji sporočilo",
+      "success": "Sporočilo je bilo poslano! Kontaktirali vas bomo v najkrajšem možnem času."
+    }
+  },
+  "footer": {
+    "description": "Profesionalne elektroinštalacije za vaš dom in podjetje. Zanesljiv partner z več kot 10-letnimi izkušnjami.",
+    "certified": "Licenciran elektrikar",
+    "licensedElectrician": "Licenciran elektrikar",
+    "services": "Storitve",
+    "contact": "Kontakt",
+    "copyright": "© 2024 Voltage Elektroinštalacije s.p. Vse pravice pridržane."
+  },
+  "details": {
+    "price": "Cena",
+    "duration": "Trajanje",
+    "warranty": "Garancija",
+    "service": "Storitev",
+    "professional": "Profesionalna",
+    "process": "Potek storitve",
+    "included": "Kaj je vključeno",
+    "materials": "Materiali in komponente",
+    "materials_desc": "Uporabljamo le kakovostne materiale vodilnih proizvajalcev",
+    "brands": "Partnerske blagovne znamke",
+    "brands_desc": "Sodelujemo z najuglednejšimi proizvajalci električne opreme",
+    "need": {
+      "title": "Potrebujete to storitev?",
+      "desc": "Pokličite nas za brezplačno svetovanje in oceno. Pripravimo vam individualno ponudbo, prilagojeno vašim potrebam."
+    },
+    "inquiry": "Pošljite povpraševanje"
+  },
+  "common": {
+    "from": "Od",
+    "24h": "24/7 za nujne primere",
+    "24h_available": "24/7 RAZPOLOŽLJIVOST",
+    "response": "Odgovorimo v 24 urah"
+  }
+}
