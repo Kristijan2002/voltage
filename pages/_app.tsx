@@ -3,6 +3,7 @@ import type { AppProps } from 'next/app';
 import App from 'next/app';
 import '../styles/globals.css';
 // Removed i18n import to avoid conflicts with custom LanguageProvider
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import { AuthProvider } from '../contexts/AuthContext';
 import { LanguageProvider } from '../components/LanguageProvider'; // твојот LanguageProvider
@@ -12,6 +13,7 @@ function MyApp({ Component, pageProps, initialLang }: AppProps & { initialLang: 
     <AuthProvider>
       <LanguageProvider initialLang={initialLang}>
         <Component {...pageProps} />
+        <SpeedInsights />
       </LanguageProvider>
     </AuthProvider>
   );
