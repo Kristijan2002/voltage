@@ -1,6 +1,7 @@
 // pages/_app.tsx
 import type { AppProps } from 'next/app';
 import App from 'next/app';
+import Head from 'next/head';
 import '../styles/globals.css';
 // Removed i18n import to avoid conflicts with custom LanguageProvider
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -11,13 +12,23 @@ import { LanguageProvider } from '../components/LanguageProvider'; // твојо
 
 function MyApp({ Component, pageProps, initialLang }: AppProps & { initialLang: 'sl' | 'en' }) {
   return (
-    <AuthProvider>
-      <LanguageProvider initialLang={initialLang}>
-        <Component {...pageProps} />
-        <SpeedInsights />
-        <Analytics />
-      </LanguageProvider>
-    </AuthProvider>
+    <>
+      <Head>
+        {/* Favicon */}
+        <link rel="icon" type="image/png" sizes="32x32" href="/front black.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/front black.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/front black.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <meta name="theme-color" content="#ffffff" />
+      </Head>
+      <AuthProvider>
+        <LanguageProvider initialLang={initialLang}>
+          <Component {...pageProps} />
+          <SpeedInsights />
+          <Analytics />
+        </LanguageProvider>
+      </AuthProvider>
+    </>
   );
 }
 

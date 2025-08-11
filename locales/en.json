@@ -329,6 +329,7 @@
     "from": "From",
     "24h": "24/7 for emergencies",
     "24h_available": "24/7 AVAILABILITY",
-    "response": "We respond within 24 hours"
+    "response": "We respond within 24 hours",
+    "language": "Language"
   }
 }

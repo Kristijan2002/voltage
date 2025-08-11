@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Phone, Mail, MapPin, Zap, CheckCircle, Menu, X, ArrowLeft, Euro, Clock, Shield, Settings, Camera, Users, Lock, Plus, Edit, Trash2, Save, Calendar, User, Award, Target } from 'lucide-react';
+import Cookies from 'js-cookie';
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../components/ui/accordion';
@@ -23,7 +24,7 @@ const logoPath = '/logo.png';
 
 export default function Home() {
   const router = useRouter();
-  const { t, language } = useLanguage();
+  const { t, language, setLanguage } = useLanguage();
   
   // State for content management - initialize with initial data to prevent loss
   const [services, setServices] = useState<Service[]>([]);
@@ -192,10 +193,12 @@ export default function Home() {
   return (
     <>
       <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Voltage Elektroinštalacije s.p. - Profesionalne elektroinštalacije</title>
         <meta name="description" content="Voltage Elektroinštalacije s.p. zagotavlja kakovostne elektro storitve v Sloveniji. Z več kot 10-letnimi izkušnjami smo vaš zanesljiv partner za vse električne potrebe." />
         <meta name="keywords" content="elektroinštalacije, elektrikar, električne napake, pametni dom, LED razsvetljava, Ljubljana" />
         <meta name="author" content="Voltage Elektroinštalacije s.p." />
+        
       </Head>
 
       <div className="min-h-screen bg-background">
@@ -223,7 +226,7 @@ export default function Home() {
               <button onClick={() => scrollToSection('kontakt')} className="text-foreground hover:text-primary transition-colors">
                 {t('navigation.contact')}
               </button>
-                              <Button 
+                  <Button 
                   variant="ghost" 
                   onClick={() => router.push('/voltageAdminSecretRouteDoNotShare')} 
                   className="text-sm flex items-center gap-2"
@@ -234,7 +237,9 @@ export default function Home() {
             </nav>
 
             {/* Language Switcher */}
+            <span className=''>
             <LanguageSwitcher />
+            </span>
 
             {/* Mobile Menu Button */}
             <button 
@@ -272,13 +277,48 @@ export default function Home() {
                   <Lock className="h-4 w-4" />
                   {t('navigation.admin')}
                 </Button>
+                
+                {/* Language Switcher for Mobile */}
+                <div className="pt-4 border-t border-border">
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm font-medium text-muted-foreground">{t('common.language') || 'Language'}</span>
+                    <div className="flex space-x-2">
+                      <button
+                        onClick={() => {
+                          setLanguage('sl');
+                          Cookies.set('NEXT_LOCALE', 'sl', { expires: 365 });
+                        }}
+                        className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${
+                          language === 'sl'
+                            ? 'bg-primary text-primary-foreground'
+                            : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                        }`}
+                      >
+                        SL
+                      </button>
+                      <button
+                        onClick={() => {
+                          setLanguage('en');
+                          Cookies.set('NEXT_LOCALE', 'en', { expires: 365 });
+                        }}
+                        className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${
+                          language === 'en'
+                            ? 'bg-primary text-primary-foreground'
+                            : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                        }`}
+                      >
+                        EN
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </nav>
             </div>
           )}
         </header>
 
         {/* Hero Section */}
-        <section id="domov" className="py-20 px-4 bg-gradient-to-br from-blue-50 to-yellow-50">
+        <section id="domov" className="py-20  bg-gradient-to-br from-blue-50 to-yellow-50">
           <div className="container mx-auto text-center">
             <div className="max-w-4xl mx-auto">
               <h1 className="mb-6 text-4xl md:text-6xl">
@@ -301,7 +341,7 @@ export default function Home() {
         </section>
 
         {/* Services Section */}
-        <section id="storitve" className="py-20 px-4">
+        <section id="storitve" className="py-20 ">
           <div className="container sm:w-[80%] mx-auto">
             <div className="text-center mb-16">
               <h2 className="mb-4">{t('services.title')}</h2>
@@ -472,7 +512,7 @@ export default function Home() {
         </section>
 
         {/* Why Choose Us */}
-        <section className="py-20 px-4">
+        <section className="py-20 ">
           <div className="container sm:w-[80%] mx-auto">
             <div className="text-center mb-16">
               <h2 className="mb-4">{t('whyChooseUs.title')}</h2>
@@ -515,7 +555,7 @@ export default function Home() {
         </section>
 
         {/* FAQ Section */}
-        <section id="vprasanja" className="py-20 px-4 bg-[#f5f5f7]">
+        <section id="vprasanja" className="py-20 bg-[#f5f5f7]">
           <div className="container mx-auto max-w-4xl">
             <div className="text-center mb-16">
               <h2 className="mb-4">{t('faq.title')}</h2>
@@ -554,7 +594,7 @@ export default function Home() {
         </section>
 
         {/* Contact Section */}
-        <section id="kontakt" className="py-20 px-4">
+        <section id="kontakt" className="py-20 ">
           <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-16">
               <h2 className="mb-4">{t('contact.title')}</h2>
@@ -674,7 +714,7 @@ export default function Home() {
         </section>
 
         {/* Footer */}
-        <footer className="bg-primary text-primary-foreground py-12 px-4 " >
+        <footer className="bg-primary text-primary-foreground py-12  " >
           <div className="container sm:w-[80%] mx-auto">
             <div className="grid md:grid-cols-3 gap-8">
               <div>
