@@ -265,14 +265,14 @@ export default function Home() {
                 <button onClick={() => scrollToSection('kontakt')} className="text-left text-foreground hover:text-primary transition-colors">
                   {t('navigation.contact')}
                 </button>
-                <Button 
+                {/* <Button 
                   variant="ghost" 
                   onClick={() => router.push('/voltageAdminSecretRouteDoNotShare')} 
                   className="justify-start text-sm flex items-center gap-2"
                 >
                   <Lock className="h-4 w-4" />
                   {t('navigation.admin')}
-                </Button>
+                </Button> */}
                 
                 {/* Language Switcher for Mobile */}
                 <div className="pt-4 border-t border-border">
