@@ -222,14 +222,14 @@ export default function Home() {
               <button onClick={() => scrollToSection('kontakt')} className="text-foreground hover:text-primary transition-colors">
                 {t('navigation.contact')}
               </button>
-                  <Button 
+                  {/* <Button 
                   variant="ghost" 
                   onClick={() => router.push('/voltageAdminSecretRouteDoNotShare')} 
                   className="text-sm flex items-center gap-2"
                 >
                   <Lock className="h-4 w-4" />
                   {t('navigation.admin')}
-                </Button>
+                </Button> */}
             </nav>
 
             {/* Language Switcher */}
