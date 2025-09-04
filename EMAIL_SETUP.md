@@ -22,8 +22,8 @@ The contact form uses Nodemailer to send emails via SMTP. Here are some common S
 ```env
 MAIL_HOST=smtp.gmail.com
 MAIL_PORT=465
-MAIL_USER=maksimovskikristijan70@gmail.com
-MAIL_PASS=04Kristijan02
+MAIL_USER=your_gmail_username@gmail.com
+MAIL_PASS=your_app_password_here
 ```
 
 **Note:** For Gmail, you need to use an App Password, not your regular password. Enable 2-factor authentication and generate an App Password.
@@ -32,16 +32,16 @@ MAIL_PASS=04Kristijan02
 ```env
 MAIL_HOST=smtp-mail.outlook.com
 MAIL_PORT=587
-MAIL_USER=maksimovskikristijan70@gmail.com
-MAIL_PASS=04Kristijan02
+MAIL_USER=your_outlook_username@outlook.com
+MAIL_PASS=your_password_here
 ```
 
 ### Custom SMTP Server
 ```env
 MAIL_HOST=mail.yourdomain.com
 MAIL_PORT=465
-MAIL_USER=maksimovskikristijan70@gmail.com
-MAIL_PASS=04Kristijan02
+MAIL_USER=your_username@yourdomain.com
+MAIL_PASS=your_password_here
 ```
 
 ## How It Works
