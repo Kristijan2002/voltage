@@ -17,6 +17,9 @@ export default function Document() {
         
 
         
+        {/* Sitemap */}
+        <link rel="sitemap" type="application/xml" href="/api/sitemap.xml" />
+        
         {/* Fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

@@ -46,6 +46,10 @@ export default function Home() {
     message: ''
   });
 
+  // Email sending state
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
   // Load data from Firebase on component mount
   useEffect(() => {
     const loadData = async () => {
@@ -163,10 +167,43 @@ export default function Home() {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert('Sporočilo je bilo poslano! Kontaktirali vas bomo v najkrajšem možnem času.');
-    setFormData({ name: '', email: '', phone: '', message: '' });
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      const response = await fetch('/api/sendMail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          to: 'info@voltage.mk', // Replace with your business email
+          subject: `Nova poraka od ${formData.name}`,
+          text: `
+          Ime: ${formData.name}
+          Email: ${formData.email}
+          Telefon: ${formData.phone}
+
+          Poraka:
+          ${formData.message}
+          `.trim()
+        }),
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', phone: '', message: '' });
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Error sending email:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const scrollToSection = (sectionId: string) => {
@@ -699,10 +736,38 @@ export default function Home() {
                     />
                   </div>
                   
-                  <Button type="submit" className="w-full bg-yellow-500 hover:bg-yellow-600 text-black">
-                    <Mail className="mr-2 h-4 w-4" />
-                    {t("contact.form.title")}
+                  <Button 
+                    type="submit" 
+                    disabled={isSubmitting}
+                    className="w-full bg-yellow-500 hover:bg-yellow-600 text-black disabled:opacity-50"
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <div className="mr-2 h-4 w-4 animate-spin rounded-full border-2 border-black border-t-transparent" />
+                        {t("contact.form.sending") || "Pošiljam..."}
+                      </>
+                    ) : (
+                      <>
+                        <Mail className="mr-2 h-4 w-4" />
+                        {t("contact.form.title")}
+                      </>
+                    )}
                   </Button>
+                  
+                  {/* Status Messages */}
+                  {submitStatus === 'success' && (
+                    <div className="mt-4 p-4 bg-green-100 border border-green-400 text-green-700 rounded-md">
+                      <p className="font-medium">✅ {t("contact.form.success") || "Sporočilo je bilo uspešno poslano!"}</p>
+                      <p className="text-sm mt-1">{t("contact.form.success_desc") || "Kontaktirali vas bomo v najkrajšem možnem času."}</p>
+                    </div>
+                  )}
+                  
+                  {submitStatus === 'error' && (
+                    <div className="mt-4 p-4 bg-red-100 border border-red-400 text-red-700 rounded-md">
+                      <p className="font-medium">❌ {t("contact.form.error") || "Napaka pri pošiljanju sporočila"}</p>
+                      <p className="text-sm mt-1">{t("contact.form.error_desc") || "Prosimo, poskusite znova ali nas kontaktirajte direktno."}</p>
+                    </div>
+                  )}
                 </form>
               </div>
             </div>

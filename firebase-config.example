@@ -7,3 +7,9 @@ NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
 NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_project_id.appspot.com
 NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
 NEXT_PUBLIC_FIREBASE_APP_ID=your_app_id
+
+# Email Configuration (for contact form)
+MAIL_HOST=mail.neoserv.si
+MAIL_PORT=465
+MAIL_USER=maksimovskikristijan70@gmail.com
+MAIL_PASS=04Kristijan02

@@ -296,7 +296,11 @@
       "message": "Sporočilo",
       "placeholder": "Opišite vašo potrebo ali problem...",
       "submit": "Pošlji sporočilo",
-      "success": "Sporočilo je bilo poslano! Kontaktirali vas bomo v najkrajšem možnem času."
+      "sending": "Pošiljam...",
+      "success": "Sporočilo je bilo uspešno poslano!",
+      "success_desc": "Kontaktirali vas bomo v najkrajšem možnem času.",
+      "error": "Napaka pri pošiljanju sporočila",
+      "error_desc": "Prosimo, poskusite znova ali nas kontaktirajte direktno."
     }
   },
   "footer": {

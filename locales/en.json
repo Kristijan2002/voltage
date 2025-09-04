@@ -296,7 +296,11 @@
       "message": "Message",
       "placeholder": "Describe your need or problem...",
       "submit": "Send Message",
-      "success": "Message has been sent! We will contact you as soon as possible."
+      "sending": "Sending...",
+      "success": "Message has been sent! We will contact you as soon as possible.",
+      "success_desc": "We will contact you as soon as possible.",
+      "error": "Error sending message",
+      "error_desc": "Please try again or contact us directly."
     }
   },
   "footer": {

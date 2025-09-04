@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Sitemap location (dynamic sitemap that includes all services and projects)
+Sitemap: https://voltages.si/api/sitemap.xml
+
+# Disallow admin routes
+Disallow: /voltageAdminSecretRouteDoNotShare
+Disallow: /voltageLoginSecretRouteDoNotShare
+
+# Allow all other content
+Allow: /service/
+Allow: /project/
