@@ -12,9 +12,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     
     // Fetch services and projects from Firebase
     const [services, projects] = await Promise.all([
-      servicesAPI.getAll().catch(() => []),
-      projectsAPI.getAll().catch(() => [])
+      servicesAPI.getAll().catch((error) => {
+        console.error('Error fetching services for sitemap:', error);
+        return [];
+      }),
+      projectsAPI.getAll().catch((error) => {
+        console.error('Error fetching projects for sitemap:', error);
+        return [];
+      })
     ]);
+
+    console.log(`Generating sitemap with ${services.length} services and ${projects.length} projects`);
 
     // Generate sitemap XML
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
