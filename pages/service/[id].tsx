@@ -8,6 +8,7 @@ import { Separator } from '../../components/ui/separator';
 import Head from 'next/head';
 import { servicesAPI } from '../../lib/firebase-services';
 import { Service } from '../../types/data';
+import { useLanguage } from '@/components/LanguageProvider';
 
 export default function ServiceDetail() {
   const router = useRouter();
@@ -15,6 +16,7 @@ export default function ServiceDetail() {
   const [service, setService] = useState<Service | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const loadService = async () => {
@@ -65,7 +67,7 @@ export default function ServiceDetail() {
           </p>
           <Button onClick={() => router.push('/')}>
             <ArrowLeft className="mr-2 h-4 w-4" />
-            Nazaj na domačo stran
+            {t('services.backToHome')}
           </Button>
         </div>
       </div>
@@ -89,7 +91,7 @@ export default function ServiceDetail() {
               className="flex items-center gap-2"
             >
               <ArrowLeft className="h-4 w-4" />
-              Nazaj na domačo stran
+              {t('services.backToHome')}
             </Button>
           </div>
         </header>
@@ -131,7 +133,7 @@ export default function ServiceDetail() {
                 {/* Description */}
                 {service.details && (
                   <div>
-                    <h2 className="text-3xl font-bold mb-6">O storitvi</h2>
+                    <h2 className="text-3xl font-bold mb-6">{t('services.aboutService')}</h2>
                     <p className="text-lg text-muted-foreground leading-relaxed">
                       {service.details}
                     </p>
@@ -141,7 +143,7 @@ export default function ServiceDetail() {
                 {/* Process */}
                 {service.process && service.process.length > 0 && (
                   <div>
-                    <h2 className="text-3xl font-bold mb-6">Postopek dela</h2>
+                    <h2 className="text-3xl font-bold mb-6">{t('services.workProcess')}</h2>
                     <div className="space-y-4">
                       {service.process.map((step, index) => (
                         <div key={index} className="flex items-start space-x-4">
@@ -158,7 +160,7 @@ export default function ServiceDetail() {
                 {/* What's Included */}
                 {service.included && service.included.length > 0 && (
                   <div>
-                    <h2 className="text-3xl font-bold mb-6">Kaj je vključeno</h2>
+                    <h2 className="text-3xl font-bold mb-6">{t('details.included')}</h2>
                     <div className="grid md:grid-cols-2 gap-4">
                       {service.included.map((item, index) => (
                         <div key={index} className="flex items-center space-x-3">
@@ -178,21 +180,21 @@ export default function ServiceDetail() {
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2">
                       <Zap className="h-5 w-5 text-yellow-500" />
-                      Hitre informacije
+                      {t('services.quichInfo')}
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div className="flex items-center justify-between">
-                      <span className="text-muted-foreground">Cena:</span>
+                      <span className="text-muted-foreground">{t('details.price')}:</span>
                       <span className="font-semibold">{service.price}</span>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-muted-foreground">Trajanje:</span>
+                      <span className="text-muted-foreground">{t('details.duration')}:</span>
                       <span className="font-semibold">{service.duration}</span>
                     </div>
                     {service.warranty && (
                       <div className="flex items-center justify-between">
-                        <span className="text-muted-foreground">Garancija:</span>
+                        <span className="text-muted-foreground">{t('details.warranty')}:</span>
                         <span className="font-semibold">{service.warranty}</span>
                       </div>
                     )}
@@ -205,7 +207,7 @@ export default function ServiceDetail() {
                     <CardHeader>
                       <CardTitle className="flex items-center gap-2">
                         <Settings className="h-5 w-5 text-blue-500" />
-                        Uporabljeni materiali
+                        {t('services.materials')}
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
@@ -226,7 +228,7 @@ export default function ServiceDetail() {
                     <CardHeader>
                       <CardTitle className="flex items-center gap-2">
                         <Shield className="h-5 w-5 text-green-500" />
-                        Blagovne znamke
+                        {t('services.brands')}
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
@@ -244,15 +246,15 @@ export default function ServiceDetail() {
                 {/* CTA */}
                 <Card className="bg-yellow-50 border-yellow-200">
                   <CardContent className="p-6 text-center">
-                    <h3 className="font-semibold mb-3">Potrebujete to storitev?</h3>
+                    <h3 className="font-semibold mb-3">{t('details.need.title')}</h3>
                     <p className="text-sm text-muted-foreground mb-4">
-                      Kontaktirajte nas za brezplačno oceno in naročitev
+                      {t('details.need.contactUs')}
                     </p>
                     <Button 
                       onClick={() => router.push('/#kontakt')}
                       className="w-full bg-yellow-500 hover:bg-yellow-600 text-black"
                     >
-                      Kontaktirajte nas
+                      {t('contact.title')}
                     </Button>
                   </CardContent>
                 </Card>
@@ -264,16 +266,16 @@ export default function ServiceDetail() {
         {/* Related Services CTA */}
         <section className="py-20 px-4 bg-muted/50">
           <div className="container mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">Potrebujete drugo storitev?</h2>
+            <h2 className="text-3xl font-bold mb-6">{t('services.need')}</h2>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Oglejte si naše ostale storitve ali nas kontaktirajte za svetovanje
+              {t('services.otherServices')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button onClick={() => router.push('/#storitve')} variant="outline">
-                Vse storitve
+               {t('services.allServices')}
               </Button>
               <Button onClick={() => router.push('/#kontakt')} className="bg-yellow-500 hover:bg-yellow-600 text-black">
-                Kontakt
+                {t('navigation.contact')}
               </Button>
             </div>
           </div>

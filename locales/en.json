@@ -133,6 +133,15 @@
     }
   },
   "services": {
+    "backToHome": "Back to homepage",
+    "aboutService": "About the service",
+    "quichInfo": "Quick information",
+    "materials": "Used materials",
+    "workProcess": "Work process",
+    "brands": "Brands",
+    "need": "Need this service?",
+    "otherServices": "See our other services or contact us for advice",
+    "allServices": "All services",
     "title": "Our Services",
     "subtitle": "We offer comprehensive electrical services for all your needs",
     "details": "Service Details",
@@ -174,6 +183,7 @@
           "Consultation to prevent faults"
         ]
       },
+      
       "nove-instalacije": {
         "title": "New Electrical Installations",
         "description": "Complete electrical installations for new apartments and houses",
@@ -267,7 +277,7 @@
     "phone": "Phone",
     "email": "Email",
     "area": "Service Area",
-    "area_value": "Ljubljana and surroundings",
+    "area_value": "Dolenjska region and surroundings",
     "area_note": "By arrangement also throughout Slovenia",
     "emergency": "Emergencies",
     "emergency_desc": "For urgent electrical failures, we are available 24/7. Call us immediately!",
@@ -285,7 +295,7 @@
       },
       "area": {
         "label": "Service Area",
-        "location": "Ljubljana and surrounding area",
+        "location": "Dolenjska region and surroundings",
         "note": "By arrangement also wider across Slovenia"
       }
     },
@@ -325,7 +335,8 @@
     "brands_desc": "We collaborate with the most respected electrical equipment manufacturers",
     "need": {
       "title": "Need This Service?",
-      "desc": "Call us for free consultation and estimate. We will prepare an individual offer tailored to your needs."
+      "desc": "Call us for free consultation and estimate. We will prepare an individual offer tailored to your needs.",
+      "contactUs": "Contact us for a free estimate and order"
     },
     "inquiry": "Send Inquiry"
   },

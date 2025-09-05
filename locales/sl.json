@@ -133,6 +133,15 @@
     }
   },
   "services": {
+    "backToHome": "Nazaj na domačo stran",
+    "aboutService": "O storitvi",
+    "quichInfo": "Hitre informacije",
+    "materials": "Uporabljeni materiali",
+    "workProcess": "Postopek dela",
+    "brands": "Blagovne znamke",
+    "need": "Potrebujete to storitev?",
+    "otherServices": "Oglejte si naše ostale storitve ali nas kontaktirajte za svetovanje",
+    "allServices": "Vse storitve",
     "title": "Naše storitve",
     "subtitle": "Nudimo celovite elektro storitve za vse vaše potrebe",
     "details": "Podrobnosti storitve",
@@ -267,7 +276,7 @@
     "phone": "Telefon",
     "email": "E-pošta",
     "area": "Območje delovanja",
-    "area_value": "Ljubljana in okolica",
+    "area_value": "Dolenjska regija in okolica",
     "area_note": "V dogovoru tudi širše po Sloveniji",
     "emergency": "Nujni primeri",
     "emergency_desc": "Za nujne električne okvare smo na voljo 24/7. Pokličite nas takoj!",
@@ -280,12 +289,12 @@
       },
       "email": {
         "label": "E-pošta",
-        "address": "info@voltage-elektro.si",
+        "address": "info@voltages.si",
         "note": "Odgovorimo v 24 urah"
       },
       "area": {
         "label": "Območje delovanja",
-        "location": "Ljubljana in okolica",
+        "location": "Dolenjska regija in okolica",
         "note": "V dogovoru tudi širše po Sloveniji"
       }
     },
@@ -325,7 +334,8 @@
     "brands_desc": "Sodelujemo z najuglednejšimi proizvajalci električne opreme",
     "need": {
       "title": "Potrebujete to storitev?",
-      "desc": "Pokličite nas za brezplačno svetovanje in oceno. Pripravimo vam individualno ponudbo, prilagojeno vašim potrebam."
+      "desc": "Pokličite nas za brezplačno svetovanje in oceno. Pripravimo vam individualno ponudbo, prilagojeno vašim potrebam.",
+      "contactUs": "Kontaktirajte nas za brezplačno oceno in naročitev"
     },
     "inquiry": "Pošljite povpraševanje"
   },

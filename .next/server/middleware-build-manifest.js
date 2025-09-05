@@ -29,11 +29,6 @@ globalThis.__BUILD_MANIFEST = {
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/service/[id].js"
-    ],
-    "/sitemap.xml": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/sitemap.xml.js"
     ]
   },
   "ampFirstPages": []
