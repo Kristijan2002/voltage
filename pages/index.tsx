@@ -743,8 +743,8 @@ export default function Home() {
                       <Phone className="h-6 w-6 text-yellow-500 mt-1" />
                       <div>
                         <p>{t("contact.phone")}</p>
-                        <p className="text-lg">+386 70 633 065</p>
-                        <p className="text-lg">+386 41 313 147</p>
+                        <a href="tel:+38670633065" className="text-lg hover:text-yellow-600 transition-colors block">+386 70 633 065</a>
+                        <a href="tel:+38641313147" className="text-lg hover:text-yellow-600 transition-colors block">+386 41 313 147</a>
                         <p className="text-sm text-muted-foreground">{t('contact.contactInfo.phone.note')}</p>
                       </div>
                  
@@ -754,7 +754,7 @@ export default function Home() {
                       <Mail className="h-6 w-6 text-yellow-500 mt-1" />
                       <div>
                         <p>{t("contact.email")}</p>
-                        <p className="text-lg">info@voltages.si</p>
+                        <a href="mailto:info@voltages.si" className="block hover:text-yellow-400 transition-colors">✉️ info@voltages.si</a>
                         <p className="text-sm text-muted-foreground">{t("contact.contactInfo.email.note")}</p>
                       </div>
                     </div>
@@ -922,9 +922,9 @@ export default function Home() {
                 <div>
                   <h4 className="mb-4">{t("footer.contact")}</h4>
                   <div className="space-y-2 text-sm opacity-80">
-                    <p>📞 +386 70 633 065</p>
-                    <p>📞 +386 41 313 147</p>
-                    <p>✉️ info@voltages.si</p>
+                    <a href="tel:+38670633065" className="block hover:text-yellow-400 transition-colors">📞 +386 70 633 065</a>
+                    <a href="tel:+38641313147" className="block hover:text-yellow-400 transition-colors">📞 +386 41 313 147</a>
+                    <a href="mailto:info@voltages.si" className="block hover:text-yellow-400 transition-colors">✉️ info@voltages.si</a>
                     <p>📍 {t("contact.contactInfo.area.location")}</p>
                   </div>
                 </div>
