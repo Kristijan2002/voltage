@@ -2,7 +2,6 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
   "/service/[id]": "pages/service/[id].js",
-  "/api/sitemap.xml": "pages/api/sitemap.xml.js"
+  "/": "pages/index.js"
 }

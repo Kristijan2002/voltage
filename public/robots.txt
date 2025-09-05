@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Dynamic sitemap - automatically includes all services and projects from Firebase
-Sitemap: https://voltages.si/api/sitemap.xml
+Sitemap: https://voltages.si/sitemap.xml
 
 # Disallow admin routes
 Disallow: /voltageAdminSecretRouteDoNotShare
