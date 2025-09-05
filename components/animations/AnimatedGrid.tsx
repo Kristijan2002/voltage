@@ -28,7 +28,6 @@ export const AnimatedGrid: React.FC<AnimatedGridProps> = ({
         visible: {
           ...staggerContainer.visible,
           transition: {
-            ...staggerContainer.visible?.transition,
             staggerChildren: staggerDelay,
             delayChildren: delay
           }
