@@ -1,5 +1,5 @@
+import { projectsAPI, servicesAPI } from '@/lib/firebase-services';
 import { NextApiRequest, NextApiResponse } from 'next';
-import { servicesAPI, projectsAPI } from '../../lib/firebase-services';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
