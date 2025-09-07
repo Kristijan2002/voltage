@@ -45,7 +45,6 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     try {
       await signInWithEmailAndPassword(auth, email, password);
     } catch (error) {
-      console.error('Sign in error:', error);
       throw error;
     }
   };
@@ -54,7 +53,6 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     try {
       await firebaseSignOut(auth);
     } catch (error) {
-      console.error('Sign out error:', error);
       throw error;
     }
   };

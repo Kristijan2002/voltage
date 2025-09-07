@@ -31,7 +31,6 @@
 
 //     return res.status(200).json({ message: "Mail sent successfully 🚀" });
 //   } catch (error) {
-//     console.error("Mail error:", error);
 //     return res.status(500).json({ message: "Error sending mail" });
 //   }
 // }

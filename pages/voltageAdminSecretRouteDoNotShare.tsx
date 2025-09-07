@@ -70,7 +70,6 @@ export default function Admin() {
       const loadData = async () => {
         try {
           setIsLoading(true);
-          console.log('Loading data from Firebase...');
           
           // Test Firebase connection first
           const connectionTest = await testFirebaseConnection();
@@ -84,13 +83,11 @@ export default function Admin() {
             faqsAPI.getAll()
           ]);
           
-          console.log('Data loaded successfully:', { services: servicesData.length, projects: projectsData.length, faqs: faqsData.length });
           
           setServices(servicesData.length > 0 ? servicesData : initialServices);
           setPortfolioProjects(projectsData.length > 0 ? projectsData : initialProjects);
           setFaqs(faqsData.length > 0 ? faqsData : initialFaqs);
         } catch (error: any) {
-          console.error('Error loading data from Firebase:', error);
           
           // Show user-friendly error message
           if (error.message.includes('Permission denied')) {
@@ -138,7 +135,6 @@ export default function Admin() {
         setNewService({});
         setIsAddingService(false);
       } catch (error) {
-        console.error('Error adding service:', error);
         alert(t('admin.services.errorAdding'));
       }
     }
@@ -155,7 +151,6 @@ export default function Admin() {
         setServices(services.map(s => s.id === editingService.id ? editingService : s));
         setEditingService(null);
       } catch (error) {
-        console.error('Error updating service:', error);
         alert(t('admin.services.errorUpdating'));
       }
     }
@@ -167,7 +162,6 @@ export default function Admin() {
         await servicesAPI.delete(serviceId);
         setServices(services.filter(s => s.id !== serviceId));
       } catch (error) {
-        console.error('Error deleting service:', error);
         alert(t('admin.services.errorDeleting'));
       }
     }
@@ -205,7 +199,6 @@ export default function Admin() {
         setNewProject({});
         setIsAddingProject(false);
       } catch (error) {
-        console.error('Error adding project:', error);
         alert(t('admin.projects.errorAdding'));
       }
     }
@@ -222,7 +215,6 @@ export default function Admin() {
         setPortfolioProjects(portfolioProjects.map(p => p.id === editingProject.id ? editingProject : p));
         setEditingProject(null);
       } catch (error) {
-        console.error('Error updating project:', error);
         alert(t('admin.projects.errorUpdating'));
       }
     }
@@ -234,7 +226,6 @@ export default function Admin() {
         await projectsAPI.delete(projectId);
         setPortfolioProjects(portfolioProjects.filter(p => p.id !== projectId));
       } catch (error) {
-        console.error('Error deleting project:', error);
         alert(t('admin.projects.errorDeleting'));
       }
     }
@@ -256,7 +247,6 @@ export default function Admin() {
         setNewFaq({});
         setIsAddingFaq(false);
       } catch (error) {
-        console.error('Error adding FAQ:', error);
         alert(t('admin.faqs.errorAdding'));
       }
     }
@@ -284,7 +274,6 @@ export default function Admin() {
         setFaqs(updatedFaqs);
         setEditingFaq(null);
       } catch (error) {
-        console.error('Error updating FAQ:', error);
         alert(t('admin.faqs.errorUpdating'));
       }
     }
@@ -296,7 +285,6 @@ export default function Admin() {
         await faqsAPI.delete(faqId);
         setFaqs(faqs.filter(f => f.id !== faqId));
       } catch (error) {
-        console.error('Error deleting FAQ:', error);
         alert(t('admin.faqs.errorDeleting'));
       }
     }
@@ -353,7 +341,6 @@ export default function Admin() {
         setPortfolioProjects(projectsData);
         setFaqs(faqsData);
       } catch (error: any) {
-        console.error('Error populating sample data:', error);
         alert('Napaka pri dodajanju vzorčnih podatkov: ' + error.message);
       }
     }

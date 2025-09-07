@@ -24,18 +24,14 @@ export default function ServiceDetail() {
         try {
           setLoading(true);
           setError(null);
-          console.log('Loading service with ID:', id);
           
           const foundService = await servicesAPI.getById(id);
           if (foundService) {
-            console.log('Service found:', foundService);
             setService(foundService);
           } else {
-            console.log('Service not found');
             setError('Storitev ni bila najdena');
           }
         } catch (err) {
-          console.error('Error loading service:', err);
           setError('Napaka pri nalaganju storitve');
         } finally {
           setLoading(false);

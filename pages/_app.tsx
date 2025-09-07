@@ -49,8 +49,8 @@ function MyApp({ Component, pageProps, initialLang }: AppProps & { initialLang: 
       <AuthProvider>
         <LanguageProvider initialLang={initialLang}>
           <Component {...pageProps} />
-          <SpeedInsights />
-          <Analytics />
+          <SpeedInsights debug={false}/>
+          <Analytics debug={false}/>
         </LanguageProvider>
       </AuthProvider>
     </>

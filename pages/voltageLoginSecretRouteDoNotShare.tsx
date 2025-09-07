@@ -38,7 +38,6 @@ export default function Login() {
       await signIn(credentials.email, credentials.password);
       // AuthContext will handle the redirect
     } catch (error: any) {
-      console.error('Login error:', error);
       if (error.code === 'auth/user-not-found' || error.code === 'auth/wrong-password') {
         setError(t('login.errors.invalidCredentials'));
       } else if (error.code === 'auth/too-many-requests') {

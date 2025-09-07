@@ -25,13 +25,9 @@ const COLLECTIONS = {
 // Debug function to test Firebase connection
 export const testFirebaseConnection = async () => {
   try {
-    console.log('Testing Firebase connection...');
-    console.log('Auth state:', auth.currentUser ? 'Authenticated' : 'Not authenticated');
-    console.log('Firestore instance:', db ? 'Available' : 'Not available');
     
     // Try to access a collection to test permissions
     const testQuery = await getDocs(collection(db, 'services'));
-    console.log('Firebase connection test successful');
     return true;
   } catch (error: any) {
     console.error('Firebase connection test failed:', error);
@@ -51,7 +47,6 @@ export const firebaseServices = {
   // Get all documents from a collection (public read access)
   async getAll<T>(collectionName: string, language?: string): Promise<T[]> {
     try {
-      console.log(`Fetching ${collectionName} from Firebase...`);
       
       let querySnapshot;
       
@@ -77,7 +72,6 @@ export const firebaseServices = {
           const q = query(collection(db, collectionName), orderBy('createdAt', 'desc'));
           querySnapshot = await getDocs(q);
         } catch (orderError: any) {
-          console.log(`Ordered query failed for ${collectionName}, trying unordered:`, orderError.message);
           // Fallback to unordered query if ordering fails
           querySnapshot = await getDocs(collection(db, collectionName));
         }
@@ -88,10 +82,8 @@ export const firebaseServices = {
         ...doc.data()
       })) as T[];
       
-      console.log(`Successfully fetched ${results.length} ${collectionName} from Firebase`);
       return results;
     } catch (error: any) {
-      console.error(`Error getting ${collectionName}:`, error);
       if (error.code === 'permission-denied') {
         throw new Error(`Permission denied accessing ${collectionName}. Please check Firebase security rules.`);
       }
@@ -111,7 +103,6 @@ export const firebaseServices = {
         return null;
       }
     } catch (error: any) {
-      console.error(`Error getting ${collectionName} by ID:`, error);
       if (error.code === 'permission-denied') {
         throw new Error(`Permission denied accessing ${collectionName}. Please check Firebase security rules.`);
       }
@@ -123,16 +114,13 @@ export const firebaseServices = {
   async add<T>(collectionName: string, data: Omit<T, 'id' | 'createdAt' | 'updatedAt'>): Promise<string> {
     try {
       checkAuth();
-      console.log(`Adding ${collectionName} to Firebase...`);
       const docRef = await addDoc(collection(db, collectionName), {
         ...data,
         createdAt: serverTimestamp(),
         updatedAt: serverTimestamp()
       });
-      console.log(`Successfully added ${collectionName} with ID: ${docRef.id}`);
       return docRef.id;
     } catch (error: any) {
-      console.error(`Error adding ${collectionName}:`, error);
       if (error.code === 'permission-denied') {
         throw new Error(`Permission denied adding ${collectionName}. Please check Firebase security rules and ensure you're logged in.`);
       }
@@ -144,15 +132,12 @@ export const firebaseServices = {
   async update<T>(collectionName: string, id: string, data: Partial<T>): Promise<void> {
     try {
       checkAuth();
-      console.log(`Updating ${collectionName} ${id} in Firebase...`);
       const docRef = doc(db, collectionName, id);
       await updateDoc(docRef, {
         ...data,
         updatedAt: serverTimestamp()
       });
-      console.log(`Successfully updated ${collectionName} ${id}`);
     } catch (error: any) {
-      console.error(`Error updating ${collectionName}:`, error);
       if (error.code === 'permission-denied') {
         throw new Error(`Permission denied updating ${collectionName}. Please check Firebase security rules and ensure you're logged in.`);
       }
@@ -164,12 +149,9 @@ export const firebaseServices = {
   async delete(collectionName: string, id: string): Promise<void> {
     try {
       checkAuth();
-      console.log(`Deleting ${collectionName} ${id} from Firebase...`);
       const docRef = doc(db, collectionName, id);
       await deleteDoc(docRef);
-      console.log(`Successfully deleted ${collectionName} ${id}`);
     } catch (error: any) {
-      console.error(`Error deleting ${collectionName}:`, error);
       if (error.code === 'permission-denied') {
         throw new Error(`Permission denied deleting ${collectionName}. Please check Firebase security rules and ensure you're logged in.`);
       }
@@ -441,7 +423,6 @@ const sampleProjects: Omit<Project, 'id' | 'createdAt' | 'updatedAt'>[] = [
 export const populateSampleData = async () => {
   try {
     checkAuth();
-    console.log('Populating database with sample data...');
     
     // Add sample services
     for (const service of sampleServices) {
@@ -453,10 +434,8 @@ export const populateSampleData = async () => {
       await projectsAPI.add(project);
     }
     
-    console.log('Sample data populated successfully');
     return true;
   } catch (error: any) {
-    console.error('Error populating sample data:', error);
     throw new Error(`Failed to populate sample data: ${error.message}`);
   }
 };

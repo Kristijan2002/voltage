@@ -22,18 +22,14 @@ export default function ProjectDetail() {
         try {
           setLoading(true);
           setError(null);
-          console.log('Loading project with ID:', id);
           
           const foundProject = await projectsAPI.getById(id);
           if (foundProject) {
-            console.log('Project found:', foundProject);
             setProject(foundProject);
           } else {
-            console.log('Project not found');
             setError('Projekt ni bil najden');
           }
         } catch (err) {
-          console.error('Error loading project:', err);
           setError('Napaka pri nalaganju projekta');
         } finally {
           setLoading(false);

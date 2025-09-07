@@ -56,16 +56,12 @@ export default function Home() {
   useEffect(() => {
     const loadData = async () => {
       try {
-        console.log('Starting to load data from Firebase...');
         
         // Load services
-        console.log('Loading services...');
         const fetchedServices = await servicesAPI.getAll();
         if (fetchedServices && fetchedServices.length > 0) {
-          console.log(`Successfully loaded ${fetchedServices.length} services from Firebase`);
           setServices(fetchedServices);
         } else {
-          console.log('No services found in Firebase, using fallback data');
           // Fallback to initial data if no services found
           setServices([
            
@@ -73,13 +69,10 @@ export default function Home() {
         }
 
         // Load projects
-        console.log('Loading projects...');
         const fetchedProjects = await projectsAPI.getAll();
         if (fetchedProjects && fetchedProjects.length > 0) {
-          console.log(`Successfully loaded ${fetchedProjects.length} projects from Firebase`);
           setPortfolioProjects(fetchedProjects);
         } else {
-          console.log('No projects found in Firebase, using fallback data');
           // Fallback to initial data if no projects found
           setPortfolioProjects([
            
@@ -87,20 +80,16 @@ export default function Home() {
         }
 
         // Load FAQs
-        console.log('Loading FAQs...');
         const fetchedFaqs = await faqsAPI.getAll();
         if (fetchedFaqs && fetchedFaqs.length > 0) {
-          console.log(`Successfully loaded ${fetchedFaqs.length} FAQs from Firebase`);
           setFaqs(fetchedFaqs);
         } else {
-          console.log('No FAQs found in Firebase, using fallback data');
           // Fallback to initial data if no FAQs found
           setFaqs([
            
           ]);
         }
       } catch (error) {
-        console.error('Error loading data from Firebase:', error);
         // Set initial data if there's an error
         setServices([
          
@@ -201,7 +190,6 @@ export default function Home() {
         setSubmitStatus('error');
       }
     } catch (error) {
-      console.error('Error sending email:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
