@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps, initialLang }: AppProps & { initialLang: 
         <meta name="theme-color" content="#ffffff" />
         
         {/* Open Graph Meta Tags for Social Media Sharing */}
-        <meta property="og:title" content="Voltage Elektroinštalacije s.p. - Profesionalne elektroinštalacije" />
+        <meta property="og:title" content="Električar Novo mesto | Voltage Elektroinštalacije s.p. – 24/7 elektro storitve" />
         <meta property="og:description" content="Voltage Elektroinštalacije s.p. zagotavlja kakovostne elektro storitve v Sloveniji. Z več kot 10-letnimi izkušnjami smo vaš zanesljiv partner za vse električne potrebe." />
         <meta property="og:image" content="https://ik.imagekit.io/egu9w5hi1/front%20black.png?updatedAt=1754934518405" />
         <meta property="og:image:width" content="1200" />
@@ -34,13 +34,16 @@ function MyApp({ Component, pageProps, initialLang }: AppProps & { initialLang: 
         
         {/* Twitter Card Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Voltage Elektroinštalacije s.p. - Profesionalne elektroinštalacije" />
+        <meta name="twitter:title" content="Električar Novo mesto | Voltage Elektroinštalacije s.p. – 24/7 elektro storitve" />
         <meta name="twitter:description" content="Voltage Elektroinštalacije s.p. zagotavlja kakovostne elektro storitve v Sloveniji. Z več kot 10-letnimi izkušnjami smo vaš zanesljiv partner za vse električne potrebe." />
         <meta name="twitter:image" content="https://ik.imagekit.io/egu9w5hi1/front%20black.png?updatedAt=1754934518405" />
         
         {/* Additional Meta Tags for Better Sharing */}
-        <meta name="description" content="Voltage Elektroinštalacije s.p. zagotavlja kakovostne elektro storitve v Sloveniji. Z več kot 10-letnimi izkušnjami smo vaš zanesljiv partner za vse električne potrebe." />
-        <meta name="keywords" content="elektroinštalacije, elektrikar, električne napake, pametni dom, LED razsvetljava, Ljubljana" />
+        <meta name="description" content="Profesionalne elektroinštalacije v Novem mestu in Sloveniji. 24/7 električar za nujna popravila, pametni dom, LED razsvetljavo in več. Pokličite nas še danes!" />
+        <meta name="keywords" content="električar Novo mesto, električar Ljubljana, elektroinštalacije Novo mesto, popravilo elektrike, električne instalacije Slovenija, 
+          montaža luči, pametne inštalacije, električna omarica, varovalke, prenova stanovanja elektro, 24/7 električar, nujna popravila elektrika, 
+          električne storitve Dolenjska, hitri električar, polnjenje električnih vozil, sončne elektrarne, električna vtičnica, varnostni pregledi elektrike
+          " />
         <meta name="author" content="Voltage Elektroinštalacije s.p." />
       </Head>
       <AuthProvider>
