@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Elektrikar Novo Mesto | Voltage Elektroinštalacije s.p.</title>
+    <meta name="description" content="Profesionalne elektroinštalacije v Novem Mestu in Dolenjski regiji. 24/7 nujni elektrikar, pametni dom, LED razsvetljava. Pokličite!">
+    <meta name="keywords" content="elektrikar Novo Mesto, elektroinštalacije Novo Mesto, električne storitve Dolenjska, nujni elektrikar Novo Mesto, pametni dom Novo Mesto, LED razsvetljava Novo Mesto, električne napake Novo Mesto">
+    <meta name="author" content="Voltage Elektroinštalacije s.p.">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Elektrikar Novo Mesto | Voltage Elektroinštalacije s.p.">
+    <meta property="og:description" content="Profesionalne elektroinštalacije v Novem Mestu in Dolenjski regiji. 24/7 nujni elektrikar, pametni dom, LED razsvetljava.">
+    <meta property="og:image" content="https://ik.imagekit.io/egu9w5hi1/front%20black.png?updatedAt=1754934518405">
+    <meta property="og:url" content="https://voltage-ten.vercel.app/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="sl_SI">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Elektrikar Novo Mesto | Voltage Elektroinštalacije s.p.">
+    <meta name="twitter:description" content="Profesionalne elektroinštalacije v Novem Mestu in Dolenjski regiji. 24/7 nujni elektrikar, pametni dom, LED razsvetljava.">
+    <meta name="twitter:image" content="https://ik.imagekit.io/egu9w5hi1/front%20black.png?updatedAt=1754934518405">
+    
+    <!-- Local Business Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Voltage Elektroinštalacije s.p.",
+        "description": "Profesionalne elektroinštalacije v Novem Mestu in Dolenjski regiji",
+        "url": "https://voltage-ten.vercel.app/",
+        "telephone": "+38670633065",
+        "email": "info@voltages.si",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Mestne njive 8,",
+            "addressLocality": "Novo Mesto",
+            "postalCode": "8000",
+            "addressCountry": "SI"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "45.8044",
+            "longitude": "15.1689"
+        },
+        "openingHours": [
+            "Mo-Fr 07:00-16:00",
+            "Sa-Su 08:00-12:00"
+        ],
+        "serviceArea": {
+            "@type": "GeoCircle",
+            "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": "45.8044",
+                "longitude": "15.1689"
+            },
+            "geoRadius": "50000"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Električne storitve",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Elektroinštalacije Novo Mesto",
+                        "description": "Nove elektroinštalacije za domove in podjetja"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Nujni elektrikar Novo Mesto",
+                        "description": "24/7 odziv za električne napake"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Pametni dom Novo Mesto",
+                        "description": "Avtomatizacija in pametni sistemi"
+                    }
+                }
+            ]
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "127"
+        }
+    }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="https://ik.imagekit.io/egu9w5hi1/front%20black.png?updatedAt=1754934518405">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://ik.imagekit.io/egu9w5hi1/front%20black.png?updatedAt=1754934518405">
+    
+    <!-- CSS -->
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        .logo {
+            height: 60px;
+            width: auto;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+        nav a:hover {
+            color: #f59e0b;
+        }
+        .hero {
+            background: linear-gradient(135deg, #f0f9ff 0%, #fef3c7 100%);
+            padding: 4rem 0;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            color: #6b7280;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        .btn-primary {
+            background: #f59e0b;
+            color: #000;
+        }
+        .btn-primary:hover {
+            background: #d97706;
+        }
+        .btn-secondary {
+            background: transparent;
+            color: #333;
+            border: 2px solid #333;
+        }
+        .btn-secondary:hover {
+            background: #333;
+            color: #fff;
+        }
+        section {
+            padding: 4rem 0;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.25rem;
+            color: #6b7280;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .service-card {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .service-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+        .service-description {
+            color: #6b7280;
+            margin-bottom: 1.5rem;
+        }
+        .service-price {
+            font-weight: 600;
+            color: #f59e0b;
+            margin-bottom: 1rem;
+        }
+        .contact-info {
+            background: #f9fafb;
+            padding: 3rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .contact-icon {
+            font-size: 1.5rem;
+            color: #f59e0b;
+        }
+        .map-container {
+            margin: 2rem 0;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .map-container iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+        }
+        .business-hours {
+            background: #fef3c7;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        .service-areas {
+            background: #f0f9ff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        .service-areas ul {
+            columns: 2;
+            list-style: none;
+            padding: 0;
+        }
+        .service-areas li {
+            padding: 0.25rem 0;
+        }
+        .service-areas li:before {
+            content: "📍 ";
+            color: #f59e0b;
+        }
+        footer {
+            background: #1f2937;
+            color: #fff;
+            padding: 3rem 0 1rem;
+            text-align: center;
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: #f59e0b;
+        }
+        .footer-section a {
+            color: #d1d5db;
+            text-decoration: none;
+        }
+        .footer-section a:hover {
+            color: #f59e0b;
+        }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            .service-areas ul {
+                columns: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <img src="https://ik.imagekit.io/egu9w5hi1/front%20black.png?updatedAt=1754934518405" 
+                     alt="Voltage elektrikar Novo Mesto - profesionalne elektroinštalacije" 
+                     class="logo">
+                <nav>
+                    <ul>
+                        <li><a href="#domov">Domov</a></li>
+                        <li><a href="#storitve">Storitve</a></li>
+                        <li><a href="#portfolio">Naša dela</a></li>
+                        <li><a href="#kontakt">Kontakt</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="domov">
+        <div class="container">
+            <h1>Elektrikar Novo Mesto - Profesionalne elektroinštalacije v Dolenjski regiji</h1>
+            <p>Voltage Elektroinštalacije s.p. zagotavlja kakovostne elektro storitve v Novem Mestu in okolici. Z več kot 10-letnimi izkušnjami smo vaš zanesljiv partner za vse električne potrebe.</p>
+            <div class="cta-buttons">
+                <a href="tel:+38670633065" class="btn btn-primary">📞 Pokličite nas</a>
+                <a href="#storitve" class="btn btn-secondary">Naše storitve</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="storitve">
+        <div class="container">
+            <h2 class="section-title">Naše električne storitve v Novem Mestu in okolici</h2>
+            <p class="section-subtitle">Nudimo celovite elektro storitve za vse vaše potrebe v Dolenjski regiji</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🏠</div>
+                    <h3 class="service-title">Nove elektroinštalacije za domove in podjetja v Novem Mestu</h3>
+                    <p class="service-description">Projektiranje in izvedba novih elektroinštalacij za stanovanjske in poslovne objekte v Novem Mestu in Dolenjski regiji.</p>
+                    <div class="service-price">Od 25€/m²</div>
+                    <a href="tel:+38670633065" class="btn btn-primary">Naročite storitev</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3 class="service-title">Odpravljanje električnih napak - 24/7 nujni elektrikar Novo Mesto</h3>
+                    <p class="service-description">Hitro in zanesljivo odpravljanje električnih napak. Na razpolago smo 24 ur na dan, 7 dni v tednu za nujne primere.</p>
+                    <div class="service-price">45€/ura (nujni primeri)</div>
+                    <a href="tel:+38670633065" class="btn btn-primary">Nujni klic</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🏡</div>
+                    <h3 class="service-title">Pametni dom in avtomatizacija v Dolenjski regiji</h3>
+                    <p class="service-description">Avtomatizacija doma, pametni sistemi za upravljanje razsvetljave, ogrevanja in varnosti v Novem Mestu.</p>
+                    <div class="service-price">Po dogovoru</div>
+                    <a href="tel:+38670633065" class="btn btn-primary">Konsultacija</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">💡</div>
+                    <h3 class="service-title">LED razsvetljava in montaža svetil v Novem Mestu</h3>
+                    <p class="service-description">Profesionalna montaža LED razsvetljave za domove in podjetja v Novem Mestu in okolici.</p>
+                    <div class="service-price">Od 15€/svetilo</div>
+                    <a href="tel:+38670633065" class="btn btn-primary">Ponudba</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🔌</div>
+                    <h3 class="service-title">Montaža vtičnic in preklopnikov v Novem Mestu</h3>
+                    <p class="service-description">Dodajanje novih vtičnic, preklopnikov in električnih elementov v domove in podjetja.</p>
+                    <div class="service-price">Od 20€/element</div>
+                    <a href="tel:+38670633065" class="btn btn-primary">Naročite</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3 class="service-title">Servis in vzdrževanje elektroinštalacij v Dolenjski regiji</h3>
+                    <p class="service-description">Redni pregledi, servis in vzdrževanje elektroinštalacij za domove in podjetja v Novem Mestu.</p>
+                    <div class="service-price">Od 30€/pregled</div>
+                    <a href="tel:+38670633065" class="btn btn-primary">Pregled</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">Zakaj izbrati Voltage elektrikarja v Novem Mestu?</h2>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🏆</div>
+                    <h3 class="service-title">Lokalni elektrikar z izkušnjami v Dolenjski regiji</h3>
+                    <p class="service-description">Licenciran elektrikar z vsemi potrebnimi certifikati in več kot 10-letnimi izkušnjami v Novem Mestu in okolici.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3 class="service-title">Hitra dostopnost v Novem Mestu in okolici</h3>
+                    <p class="service-description">Odziv v 24 urah, za nujne primere 24/7. Lokalna dostopnost v Novem Mestu, Krškem, Brežicah in drugih občinah Dolenjske.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🛡️</div>
+                    <h3 class="service-title">Certificiran elektrikar za vse vrste električnih del</h3>
+                    <p class="service-description">2-letna garancija na vse opravljeno delo. Stalna podpora tudi po opravljenem delu.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <div class="container">
+            <h2 class="section-title">Naša dela - Električni projekti v Novem Mestu in okolici</h2>
+            <p class="section-subtitle">Oglejte si nekaj naših najnovejših projektov v Dolenjski regiji</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="[PROJECT_IMAGE_1]" alt="Električni projekt v Novem Mestu - stanovanjska instalacija" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1rem;">
+                    <h3 class="service-title">Stanovanjske elektroinštalacije v Novem Mestu</h3>
+                    <p class="service-description">Kompletna elektroinštalacija za novo stanovanje v centru Novega Mesta z pametnimi sistemi.</p>
+                </div>
+
+                <div class="service-card">
+                    <img src="[PROJECT_IMAGE_2]" alt="Poslovna elektroinštalacija v Dolenjski regiji" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1rem;">
+                    <h3 class="service-title">Poslovne električne instalacije v Dolenjski regiji</h3>
+                    <p class="service-description">Elektroinštalacija za poslovni objekt v Krškem z LED razsvetljavo in pametnimi sistemi.</p>
+                </div>
+
+                <div class="service-card">
+                    <img src="[PROJECT_IMAGE_3]" alt="Pametni dom sistem v Novem Mestu - pred in po" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1rem;">
+                    <h3 class="service-title">Pametni dom sistemi v Novem Mestu</h3>
+                    <p class="service-description">Avtomatizacija doma v Brežicah z upravljanjem razsvetljave, ogrevanja in varnosti.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="kontakt">
+        <div class="container">
+            <h2 class="section-title">Kontakt - Elektrikar Novo Mesto</h2>
+            <p class="section-subtitle">Pokličite nas za brezplačno oceno v Novem Mestu in Dolenjski regiji</p>
+            
+            <div class="contact-info">
+                <h3>Naše lokacije v Dolenjski regiji</h3>
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <strong>Telefon</strong><br>
+                            <a href="tel:+38670633065">+386 70 633 065</a><br>
+                            <a href="tel:+38641313147">+386 41 313 147</a><br>
+                            <small>24/7 za nujne primere</small>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div>
+                            <strong>E-pošta</strong><br>
+                            <a href="mailto:info@voltages.si">info@voltages.si</a><br>
+                            <small>Odgovorimo v 24 urah</small>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <strong>Naslov</strong><br>
+                            Voltage Elektroinštalacije s.p.<br>
+                            Mestne njive 8,<br>
+                            8000 Novo Mesto, Slovenija
+                        </div>
+                    </div>
+                </div>
+
+                <div class="business-hours">
+                    <h4>🕒 Delovni čas</h4>
+                    <p><strong>Pon - Pet:</strong> 7:00 - 16:00</p>
+                    <p><strong>Sob:</strong> 8:00 - 12:00 (po dogovoru)</p>
+                    <p><strong>Ned:</strong> Zaprto (razen nujnih primerov)</p>
+                    <p><strong>Nujni primeri:</strong> 24/7</p>
+                </div>
+
+                <div class="service-areas">
+                    <h4>🗺️ Območje delovanja</h4>
+                    <ul>
+                        <li>Novo Mesto (8000)</li>
+                        <li>Krško (8270)</li>
+                        <li>Brežice (8250)</li>
+                        <li>Trebnje (8210)</li>
+                        <li>Žužemberk (8360)</li>
+                        <li>Metlika (8330)</li>
+                        <li>Semič (8333)</li>
+                        <li>Dolenjska regija</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2781.123456789!2d15.123456!3d45.123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sNovo%20Mesto!5e0!3m2!1ssl!2ssi!4v1234567890123!5m2!1ssl!2ssi"
+                    allowfullscreen="" 
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Voltage Elektroinštalacije s.p.</h3>
+                    <p>Profesionalne elektroinštalacije za vaš dom in podjetje. Zanesljiv partner z več kot 10-letnimi izkušnjami v Novem Mestu in Dolenjski regiji.</p>
+                    <p><strong>Licenciran elektrikar</strong></p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Storitve</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="#storitve">Elektroinštalacije Novo Mesto</a></li>
+                        <li><a href="#storitve">Nujni elektrikar Novo Mesto</a></li>
+                        <li><a href="#storitve">Pametni dom Novo Mesto</a></li>
+                        <li><a href="#storitve">LED razsvetljava Novo Mesto</a></li>
+                        <li><a href="#storitve">Električne napake Novo Mesto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Kontakt</h3>
+                    <p><a href="tel:+38670633065">📞 +386 70 633 065</a></p>
+                    <p><a href="tel:+38641313147">📞 +386 41 313 147</a></p>
+                    <p><a href="mailto:info@voltages.si">✉️ info@voltages.si</a></p>
+                    <p>📍 Novo Mesto, Dolenjska regija</p>
+                </div>
+            </div>
+            
+            <div style="border-top: 1px solid #374151; padding-top: 1rem; text-align: center; color: #9ca3af;">
+                <p>© 2024 Voltage Elektroinštalacije s.p. Vse pravice pridržane.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
