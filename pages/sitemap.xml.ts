@@ -1,6 +1,6 @@
 // pages/sitemap.xml.tsx
 import { GetServerSideProps } from 'next';
-import { servicesAPI, projectsAPI } from '../lib/firebase-services';
+import { servicesAPI } from '../lib/firebase-services';
 
 function Sitemap() {
   return null;
@@ -9,9 +9,9 @@ function Sitemap() {
 export const getServerSideProps: GetServerSideProps = async ({ res }) => {
   const currentDate = new Date().toISOString().split('T')[0];
 
-  const [services, projects] = await Promise.all([
+  const [services] = await Promise.all([
     servicesAPI.getAll().catch(() => []),
-    projectsAPI.getAll().catch(() => []),
+    // projectsAPI.getAll().catch(() => []),
   ]);
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -33,17 +33,7 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
     </url>`
       )
       .join('')}
-    ${projects
-      .map(
-        (project) => `
-    <url>
-      <loc>https://voltages.si/project/${project.id}</loc>
-      <lastmod>${currentDate}</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.7</priority>
-    </url>`
-      )
-      .join('')}
+  
   </urlset>`;
 
   res.setHeader('Content-Type', 'text/xml');
@@ -54,3 +44,16 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
 };
 
 export default Sitemap;
+
+
+// ${projects
+//   .map(
+//     (project) => `
+// <url>
+//   <loc>https://voltages.si/project/${project.id}</loc>
+//   <lastmod>${currentDate}</lastmod>
+//   <changefreq>monthly</changefreq>
+//   <priority>0.7</priority>
+// </url>`
+//   )
+//   .join('')}

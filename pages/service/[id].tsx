@@ -75,6 +75,10 @@ export default function ServiceDetail() {
       <Head>
         <title>{service.title} - Voltage Elektroinštalacije</title>
         <meta name="description" content={service.description} />
+        <link
+          rel="canonical"
+          href={`https://voltages.si/service/${service.id}`}
+        />
       </Head>
 
       <div className="min-h-screen bg-background">
